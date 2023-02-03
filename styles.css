@@ -15,6 +15,121 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
 
 /* ----------------------------------------------- */
+/* Universal styles */
+/* ----------------------------------------------- */
+
+:root {
+  --blue: #1a8ddd;
+  --green: #35ddb3;
+  --yellow: #dddc61;
+  --orange: #dd6844;
+  --purple: #8f71dd;
+  --grey: #dddddd;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+p {
+  color: #333;
+  padding-left: 0px;
+}
+
+h1 {
+  padding-bottom: 20px;
+}
+
+h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  margin-bottom: 0px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-grey {
+  color: #9b9b9b;
+}
+
+/* ----------------------------------------------- */
+/* Bar chart styling */
+/* ----------------------------------------------- */
+
+.key-wrapper {
+  display: flex;
+  gap: 50px;
+}
+
+.key-item {
+  display: flex;
+  align-items: center;
+}
+
+.square {
+  width: 12px;
+  height: 12px;
+  display: block;
+  transform: rotate(45deg);
+  margin-right: 10px;
+}
+
+.adherence {
+  background-color: var(--blue);
+}
+.combination {
+  background-color: var(--green);
+}
+.dosing {
+  background-color: var(--yellow);
+}
+.guidelines {
+  background-color: var(--orange);
+}
+.safety {
+  background-color: var(--purple);
+}
+.other {
+  background-color: var(--grey);
+}
+
+/* ----------------------------------------------- */
+/* Main body styles */
+/* ----------------------------------------------- */
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 2% 3% 2% 3%;
+}
+
+.calls {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.col {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.details-section {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  max-width: 400px;
+  justify-content: space-between;
+}
+
+/* ----------------------------------------------- */
 /* Sidebar styles */
 /* ----------------------------------------------- */
 
@@ -37,7 +152,7 @@
 
 .sidenav a,
 h3,
-p {
+.name {
   padding: 8px 8px 8px 50px;
   text-decoration: none;
   font-size: 1rem;
@@ -67,16 +182,16 @@ p {
 .bar1,
 .bar2,
 .bar3 {
-  width: 35px;
-  height: 5px;
+  width: 30px;
+  height: 3px;
   background-color: #333;
-  margin: 6px 0;
+  margin: 5px 0;
   transition: 0.9s;
 }
 
 .change .bar1 {
-  -webkit-transform: rotate(-45deg) translate(-9px, 6px);
-  transform: rotate(-45deg) translate(-9px, 6px);
+  -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+  transform: rotate(-45deg) translate(-5px, 4px);
 }
 
 .change .bar2 {
@@ -89,42 +204,42 @@ p {
 }
 
 /* ----------------------------------------------- */
-/* Universal styles */
+/* Donut styles */
 /* ----------------------------------------------- */
 
-body {
-  font-family: "Inter", sans-serif;
-  background-color: #f2f2f2;
+.donut-wrapper {
+  display: flex;
+  justify-content: center;
 }
 
-h3 {
-  margin-bottom: 0px;
+.circle-chart__circle {
+  animation: circle-chart-fill 2s reverse; /* 1 */
+  transform: rotate(-90deg); /* 2, 3 */
+  transform-origin: center; /* 4 */
 }
 
-.text-white {
-  color: white;
+.circle-chart__circle--negative {
+  transform: rotate(-90deg) scale(1, -1); /* 1, 2, 3 */
 }
 
-.text-grey {
-  color: #9b9b9b;
+.circle-chart__info {
+  animation: circle-chart-appear 2s forwards;
+  opacity: 0;
+  transform: translateY(0.3em);
 }
 
-/* ----------------------------------------------- */
-/* Main body styles */
-/* ----------------------------------------------- */
-
-#main {
-  transition: margin-left 0.5s;
-  padding: 2% 3% 2% 3%;
+@keyframes circle-chart-fill {
+  to {
+    stroke-dasharray: 0 100;
+  }
 }
 
-.main-content-wrapper {
-  margin-top: 1rem;
+@keyframes circle-chart-appear {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
-
-/* ----------------------------------------------- */
-/* Generic styles */
-/* ----------------------------------------------- */
 
 /* ----------------------------------------------- */
 /* Mobile styles */
@@ -141,5 +256,18 @@ h3 {
 
   #toggle {
     display: block;
+  }
+
+  .col {
+    width: 100%;
+  }
+
+  .calls > .col:nth-child(2) {
+    margin-top: 30px;
+  }
+
+  .key-wrapper {
+    gap: 20px;
+    flex-wrap: wrap;
   }
 }

@@ -13,7 +13,7 @@
       <div id="mySidenav" class="sidenav" style="width: 250px">
         <div class="menu-section">
           <h3 class="text-grey">Welcome.</h3>
-          <p class="text-white">Andy Repp</p>
+          <p class="text-white name">Andy Repp</p>
         </div>
         <div class="menu-section">
           <h3 class="text-grey">Metrics</h3>
@@ -37,15 +37,138 @@
           <div class="bar3"></div>
         </div>
       </span>
+      <h1>Overview</h1>
       <div class="main-content-wrapper">
-        <div class="left">
-          <h1>Overview</h1>
-          <div class="call">
-            <p>Next call</p>
-            <p>Date:</p>
+        <div class="calls">
+          <div class="col half">
+            <h2 class="primary-heading">Next call</h2>
+            <div class="details-section">
+              <div class="col">
+                <h4 class="main-subheading">Date:</h4>
+              </div>
+              <div class="col">
+                <p class="details">
+                  Tomorrow, 3PM <br />
+                  12 November 2017
+                </p>
+              </div>
+            </div>
+            <div class="details-section">
+              <div class="col">
+                <h4 class="main-subheading">Account:</h4>
+              </div>
+              <div class="col">
+                <p class="details">Dr. Clinton Ackerman</p>
+              </div>
+            </div>
+            <div class="details-section">
+              <div class="col">
+                <h4 class="main-subheading">Speciality:</h4>
+              </div>
+              <div class="col">
+                <p class="details">
+                  Respiratory therapist <br />
+                  Assistive therapy
+                </p>
+              </div>
+            </div>
+            <div class="details-section">
+              <div class="col">
+                <h4 class="main-subheading">Profile:</h4>
+              </div>
+              <div class="col">
+                <p class="details">Confident</p>
+              </div>
+            </div>
+          </div>
+          <div class="col half">
+            <h2 class="primary-heading">Calls this month</h2>
+            <div class="donut-wrapper">
+              <svg
+                class="circle-chart"
+                viewbox="0 0 33.83098862 33.83098862"
+                width="200"
+                height="200"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <circle
+                  class="circle-chart__background"
+                  stroke="#d4d4d4"
+                  stroke-width="2"
+                  fill="none"
+                  cx="16.91549431"
+                  cy="16.91549431"
+                  r="15.91549431"
+                />
+                <circle
+                  class="circle-chart__circle circle-chart__circle--negative"
+                  stroke="#F68B15"
+                  stroke-width="2"
+                  stroke-dasharray="75,100"
+                  stroke-linecap="round"
+                  fill="none"
+                  cx="16.91549431"
+                  cy="16.91549431"
+                  r="15.91549431"
+                />
+                <g class="circle-chart__info">
+                  <text
+                    class="circle-chart__percent"
+                    x="16.91549431"
+                    y="14.5"
+                    alignment-baseline="central"
+                    text-anchor="middle"
+                    font-size="10"
+                    fill="black"
+                  >
+                    21
+                  </text>
+                  <text
+                    class="circle-chart__subline"
+                    x="16.91549431"
+                    y="21.5"
+                    alignment-baseline="central"
+                    text-anchor="middle"
+                    font-size="4"
+                    fill="grey"
+                  >
+                    / 28
+                  </text>
+                </g>
+              </svg>
+            </div>
           </div>
         </div>
-        <div class="right"></div>
+
+        <div class="topics">
+          <h2 class="primary-heading">Detailed topic breakdown</h2>
+          <div class="key-wrapper">
+            <div class="key-item">
+              <span class="square adherence"></span>
+              <p class="key-name">Adherence</p>
+            </div>
+            <div class="key-item">
+              <span class="square combination"></span>
+              <p class="key-name">Combination</p>
+            </div>
+            <div class="key-item">
+              <span class="square dosing"></span>
+              <p class="key-name">Dosing</p>
+            </div>
+            <div class="key-item">
+              <span class="square guidelines"></span>
+              <p class="key-name">Guidelines</p>
+            </div>
+            <div class="key-item">
+              <span class="square safety"></span>
+              <p class="key-name">Safety</p>
+            </div>
+            <div class="key-item">
+              <span class="square other"></span>
+              <p class="key-name">Other</p>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
     <script src="sidebar.js"></script>
