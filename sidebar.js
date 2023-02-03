@@ -5,8 +5,8 @@ document.getElementById("burger-box").addEventListener("click", function () {
 });
 
 //Variables
-var sidenav = document.getElementById("mySidenav"),
-  main = document.getElementById("main");
+var sidenav = document.getElementById("mySidenav");
+var main = document.getElementById("main");
 var burgerBox = document.getElementById("burger-box");
 
 // Check if device is mobile

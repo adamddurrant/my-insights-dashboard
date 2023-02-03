@@ -63,6 +63,42 @@ h3 {
 /* Bar chart styling */
 /* ----------------------------------------------- */
 
+.chart {
+  display: flex;
+  height: 20px;
+}
+
+.charts-wrapper > div {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.bar {
+  height: 100%;
+}
+.bar:nth-child(1) {
+  background-color: var(--blue);
+}
+.bar:nth-child(2) {
+  background-color: var(--green);
+}
+.bar:nth-child(3) {
+  background-color: var(--yellow);
+}
+.bar:nth-child(4) {
+  background-color: var(--orange);
+}
+.bar:nth-child(5) {
+  background-color: var(--purple);
+}
+.bar:nth-child(6) {
+  background-color: var(--grey);
+}
+
+.topic-heading {
+  margin-top: 30px;
+}
+
 .key-wrapper {
   display: flex;
   gap: 50px;
