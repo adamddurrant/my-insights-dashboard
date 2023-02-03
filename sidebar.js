@@ -4,7 +4,11 @@ document.getElementById("burger-box").addEventListener("click", function () {
   squashBurger(this);
 });
 window.addEventListener("resize", function () {
-  if (window.innerWidth > 500) {
+  //this prevents burger showing closed on resize - important for mobile landscape
+  if (window.innerWidth > 500 && burgerBox.classList.contains("change")) {
+    openSidebar();
+    squashBurger(burgerBox);
+  } else if (window.innerWidth > 500) {
     openSidebar();
   } else {
     closeSidebar();

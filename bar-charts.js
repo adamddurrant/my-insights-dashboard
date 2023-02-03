@@ -1,3 +1,4 @@
+//Create chart container, heading and wrapper
 const createChart = (title, percentages, containerId) => {
   const chartContainer = document.getElementById(containerId);
   const heading = document.createElement("h5");
@@ -5,6 +6,7 @@ const createChart = (title, percentages, containerId) => {
   heading.innerHTML = title;
   chart.classList.add("chart");
 
+  //Apply percentage data to bars and bar tooltips & populate elements
   percentages.forEach((percentage) => {
     const bar = document.createElement("div");
     bar.classList.add("bar", "tooltip");
