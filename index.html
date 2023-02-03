@@ -30,7 +30,12 @@
     </header>
     <!--Page content-->
     <main id="main" style="margin-left: 250px" ;>
-      <span id="toggle" style="cursor: pointer">
+      <span
+        id="toggle"
+        style="cursor: pointer"
+        aria-haspopup="true"
+        aria-controls="menu"
+      >
         <div id="burger-box" class="burger-box change">
           <div class="bar1"></div>
           <div class="bar2"></div>
@@ -115,18 +120,18 @@
                   <text
                     class="circle-chart__percent"
                     x="16.91549431"
-                    y="14.5"
+                    y="15"
                     alignment-baseline="central"
                     text-anchor="middle"
-                    font-size="10"
-                    fill="black"
+                    font-size="12"
+                    fill="#333"
                   >
                     21
                   </text>
                   <text
                     class="circle-chart__subline"
                     x="16.91549431"
-                    y="21.5"
+                    y="22"
                     alignment-baseline="central"
                     text-anchor="middle"
                     font-size="4"

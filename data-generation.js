@@ -1,6 +1,3 @@
-//DONUT
-
-//CHARTS
 const createChart = (title, percentages, containerId) => {
   const chartContainer = document.getElementById(containerId);
   const heading = document.createElement("h4");
@@ -21,9 +18,9 @@ const createChart = (title, percentages, containerId) => {
 
 //Dummy data
 const data1 = [20, 30, 25, 10, 10, 5];
-const data2 = [40, 30, 20, 5, 5, 0];
+const data2 = [20, 30, 20, 5, 5, 20];
 const data3 = [15, 25, 20, 20, 15, 5];
-const data4 = [50, 25, 15, 5, 5, 0];
+const data4 = [50, 22, 15, 5, 5, 3];
 
 //Invocations
 createChart("Avg. all", data1, "chartContainer1");
