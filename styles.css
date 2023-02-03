@@ -63,14 +63,69 @@ h3 {
 /* Bar chart styling */
 /* ----------------------------------------------- */
 
+.tooltip {
+  position: relative;
+}
+
+/* Tooltip box */
+.tooltip:before {
+  content: attr(data-tooltip);
+  position: absolute;
+  width: 30px;
+  background-color: #ffffff;
+  color: #333;
+  font-weight: 500;
+  text-align: center;
+  padding: 10px;
+  line-height: 1.2;
+  border-radius: 6px;
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.3s;
+  bottom: 120%;
+  left: 50%;
+  margin-left: -25px;
+  font-size: 0.75em;
+  visibility: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* Tooltip arrow */
+.tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: 75%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  opacity: 0;
+  transition: opacity 0.6s;
+  border-color: #ffffff transparent transparent transparent;
+  visibility: hidden;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
+  z-index: 99;
+}
+
+.tooltip:hover:before,
+.tooltip:hover:after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .chart {
   display: flex;
-  height: 20px;
+  height: 30px;
 }
 
 .charts-wrapper > div {
-  margin-top: 15px;
-  margin-bottom: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.charts-wrapper h4 {
+  margin-bottom: 10px;
+  font-size: 0.8rem;
 }
 
 .bar {
@@ -96,12 +151,15 @@ h3 {
 }
 
 .topic-heading {
-  margin-top: 30px;
+  margin-top: 50px;
+  margin-bottom: 30px;
 }
 
 .key-wrapper {
   display: flex;
-  gap: 50px;
+  flex-wrap: wrap;
+  gap: 40px;
+  width: 100%;
 }
 
 .key-item {
@@ -142,7 +200,7 @@ h3 {
 
 #main {
   transition: margin-left 0.5s;
-  padding: 2% 3% 2% 3%;
+  padding: 2% 7% 2% 7%;
 }
 
 .calls {
@@ -163,6 +221,10 @@ h3 {
   padding-bottom: 20px;
   max-width: 400px;
   justify-content: space-between;
+}
+
+.hero-heading {
+  font-size: 2.5rem;
 }
 
 /* ----------------------------------------------- */
@@ -192,14 +254,19 @@ h3,
   padding: 8px 8px 8px 50px;
   text-decoration: none;
   font-size: 1rem;
-  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover,
 .offcanvas a:focus {
-  color: #9e9e9e;
+  background-color: rgb(235, 235, 235);
+  color: #333;
+}
+
+.active {
+  background-color: rgb(235, 235, 235);
+  color: #333;
 }
 
 .menu-section {
@@ -213,16 +280,17 @@ h3,
 .burger-box {
   display: inline-block;
   cursor: pointer;
+  margin-bottom: 20px;
 }
 
 .bar1,
 .bar2,
 .bar3 {
   width: 30px;
-  height: 3px;
+  height: 5px;
   background-color: #333;
   margin: 5px 0;
-  transition: 0.9s;
+  transition: 0.3s;
 }
 
 .change .bar1 {
@@ -235,8 +303,8 @@ h3,
 }
 
 .change .bar3 {
-  -webkit-transform: rotate(45deg) translate(-8px, -8px);
-  transform: rotate(45deg) translate(-8px, -8px);
+  -webkit-transform: rotate(45deg) translate(-10px, -9px);
+  transform: rotate(45deg) translate(-10px, -9px);
 }
 
 /* ----------------------------------------------- */
@@ -304,6 +372,10 @@ h3,
 
   .key-wrapper {
     gap: 20px;
-    flex-wrap: wrap;
+  }
+
+  #main {
+    transition: margin-left 0.5s;
+    padding: 5% 6% 5% 6%;
   }
 }
