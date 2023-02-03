@@ -1,15 +1,31 @@
-body {
-  font-family: "Lato", sans-serif;
+/* ----------------------------------------------- */
+/* CSS Reset */
+/* ----------------------------------------------- */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
+/* ----------------------------------------------- */
+/* Imports */
+/* ----------------------------------------------- */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+
+/* ----------------------------------------------- */
+/* Sidebar styles */
+/* ----------------------------------------------- */
 
 .sidenav {
   height: 100%;
-  width: 0;
+  width: 250px;
   position: fixed;
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #333333;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
@@ -19,42 +35,31 @@ body {
   width: 20%;
 }
 
-.sidenav a {
-  padding: 8px 8px 8px 32px;
+.sidenav a,
+h3,
+p {
+  padding: 8px 8px 8px 50px;
   text-decoration: none;
-  font-size: 25px;
-  color: #818181;
+  font-size: 1rem;
+  color: #ffffff;
   display: block;
   transition: 0.3s;
 }
 
 .sidenav a:hover,
 .offcanvas a:focus {
-  color: #f1f1f1;
+  color: #9e9e9e;
 }
 
-.closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px !important;
-  margin-left: 50px;
+.menu-section {
+  padding-bottom: 2rem;
 }
 
-#main {
-  transition: margin-left 0.5s;
-  padding: 16px;
-}
+/* ----------------------------------------------- */
+/* Burger styles */
+/* ----------------------------------------------- */
 
-@media screen and (max-height: 450px) {
-  .sidenav {
-    padding-top: 15px;
-  }
-  .sidenav a {
-    font-size: 18px;
-  }
-}
-.container {
+.burger-box {
   display: inline-block;
   cursor: pointer;
 }
@@ -81,4 +86,60 @@ body {
 .change .bar3 {
   -webkit-transform: rotate(45deg) translate(-8px, -8px);
   transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ----------------------------------------------- */
+/* Universal styles */
+/* ----------------------------------------------- */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f2f2f2;
+}
+
+h3 {
+  margin-bottom: 0px;
+}
+
+.text-white {
+  color: white;
+}
+
+.text-grey {
+  color: #9b9b9b;
+}
+
+/* ----------------------------------------------- */
+/* Main body styles */
+/* ----------------------------------------------- */
+
+#main {
+  transition: margin-left 0.5s;
+  padding: 2% 3% 2% 3%;
+}
+
+.main-content-wrapper {
+  margin-top: 1rem;
+}
+
+/* ----------------------------------------------- */
+/* Generic styles */
+/* ----------------------------------------------- */
+
+/* ----------------------------------------------- */
+/* Mobile styles */
+/* ----------------------------------------------- */
+
+@media screen and (max-width: 450px) {
+  .sidenav {
+    padding-top: 15px;
+    width: 0px;
+  }
+  .sidenav a {
+    font-size: 18px;
+  }
+
+  #toggle {
+    display: block;
+  }
 }
