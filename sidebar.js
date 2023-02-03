@@ -3,6 +3,13 @@ document.getElementById("toggle").addEventListener("click", toggleNav);
 document.getElementById("burger-box").addEventListener("click", function () {
   squashBurger(this);
 });
+window.addEventListener("resize", function () {
+  if (window.innerWidth > 500) {
+    openSidebar();
+  } else {
+    closeSidebar();
+  }
+});
 
 //Variables
 var sidenav = document.getElementById("mySidenav");
@@ -22,12 +29,25 @@ if (isMobile) {
 } else {
   sidenav.style.width = "250px";
   main.style.marginLeft = "250px";
+  squashBurger(burgerBox);
 }
 
-//Navigation toggle open/close
+//Sidebar toggle open/close
 function toggleNav() {
   sidenav.style.width = sidenav.style.width == "250px" ? "0" : "250px";
   main.style.marginLeft = main.style.marginLeft == "250px" ? "0" : "250px";
+}
+
+//Open sidebar
+function openSidebar() {
+  sidenav.style.width = "250px";
+  main.style.marginLeft = "250px";
+}
+
+//Close sidebar
+function closeSidebar() {
+  sidenav.style.width = "0px";
+  main.style.marginLeft = "0px";
 }
 
 //Burger menu collapse

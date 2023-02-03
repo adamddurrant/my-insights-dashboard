@@ -1,6 +1,4 @@
-/* ----------------------------------------------- */
 /* CSS Reset */
-/* ----------------------------------------------- */
 
 * {
   margin: 0;
@@ -8,15 +6,11 @@
   box-sizing: border-box;
 }
 
-/* ----------------------------------------------- */
 /* Imports */
-/* ----------------------------------------------- */
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
 
-/* ----------------------------------------------- */
 /* Universal styles */
-/* ----------------------------------------------- */
 
 :root {
   --blue: #1a8ddd;
@@ -59,9 +53,7 @@ h3 {
   color: #9b9b9b;
 }
 
-/* ----------------------------------------------- */
 /* Bar chart styling */
-/* ----------------------------------------------- */
 
 .tooltip {
   position: relative;
@@ -82,7 +74,7 @@ h3 {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.3s;
-  bottom: 108%;
+  bottom: 106%;
   left: 50%;
   margin-left: -25px;
   font-size: 0.75em;
@@ -90,7 +82,6 @@ h3 {
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
 
-/* Tooltip arrow */
 .tooltip:after {
   content: "";
   position: absolute;
@@ -123,7 +114,7 @@ h3 {
   margin-bottom: 30px;
 }
 
-.charts-wrapper h4 {
+.charts-wrapper h5 {
   margin-bottom: 10px;
   font-size: 0.8rem;
 }
@@ -199,9 +190,7 @@ h3 {
   background-color: var(--grey);
 }
 
-/* ----------------------------------------------- */
 /* Main body styles */
-/* ----------------------------------------------- */
 
 #main {
   transition: margin-left 0.5s;
@@ -232,9 +221,7 @@ h3 {
   font-size: 2.5rem;
 }
 
-/* ----------------------------------------------- */
 /* Sidebar styles */
-/* ----------------------------------------------- */
 
 .sidenav {
   height: 100%;
@@ -278,9 +265,7 @@ h3,
   padding-bottom: 2rem;
 }
 
-/* ----------------------------------------------- */
 /* Burger styles */
-/* ----------------------------------------------- */
 
 .burger-box {
   display: inline-block;
@@ -312,9 +297,7 @@ h3,
   transform: rotate(45deg) translate(-10px, -9px);
 }
 
-/* ----------------------------------------------- */
 /* Donut styles */
-/* ----------------------------------------------- */
 
 .donut-wrapper {
   display: flex;
@@ -341,11 +324,9 @@ h3,
   display: none;
 }
 
-/* ----------------------------------------------- */
 /* Mobile styles */
-/* ----------------------------------------------- */
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 500px) {
   .sidenav {
     padding-top: 15px;
     width: 0px;
@@ -376,11 +357,9 @@ h3,
   }
 }
 
-/* ----------------------------------------------- */
 /* Tablet portrait */
-/* ----------------------------------------------- */
 
-@media (min-width: 641px) and (max-width: 961px) {
+@media (min-width: 501px) and (max-width: 961px) {
   #main {
     padding: 8%;
   }
