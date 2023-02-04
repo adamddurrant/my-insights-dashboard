@@ -16,9 +16,9 @@ window.addEventListener("resize", function () {
 });
 
 //Variables
-var sidenav = document.getElementById("mySidenav");
-var main = document.getElementById("main");
-var burgerBox = document.getElementById("burger-box");
+const sidenav = document.getElementById("mySidenav");
+const main = document.getElementById("main");
+const burgerBox = document.getElementById("burger-box");
 
 // Check if device is mobile
 const isMobile = window.matchMedia(
@@ -56,5 +56,12 @@ function closeSidebar() {
 
 //Burger menu collapse
 function squashBurger(elem) {
-  elem.classList.toggle("change");
+  const attribute = elem.getAttribute("aria-expanded");
+  if (attribute === "true") {
+    elem.setAttribute("aria-expanded", "false");
+    elem.classList.toggle("change");
+  } else {
+    elem.setAttribute("aria-expanded", "true");
+    elem.classList.toggle("change");
+  }
 }

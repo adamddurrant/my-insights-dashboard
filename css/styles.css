@@ -59,7 +59,6 @@ h3 {
   position: relative;
 }
 
-/* Tooltip box */
 .tooltip:before {
   content: attr(data-tooltip);
   position: absolute;
