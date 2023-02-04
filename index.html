@@ -95,58 +95,63 @@
           <div class="col half">
             <h2 class="primary-heading">Calls this month</h2>
             <div class="donut-wrapper">
-              <svg
-                class="circle-chart"
-                viewbox="0 0 33.83098862 33.83098862"
-                width="200"
-                height="200"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <circle
-                  class="circle-chart__background"
-                  stroke="#d4d4d4"
-                  stroke-width="2"
-                  fill="none"
-                  cx="16.91549431"
-                  cy="16.91549431"
-                  r="15.91549431"
-                />
-                <circle
-                  class="circle-chart__circle circle-chart__circle--negative"
-                  stroke="#F68B15"
-                  stroke-width="2"
-                  stroke-dasharray="75,100"
-                  stroke-linecap="round"
-                  fill="none"
-                  cx="16.91549431"
-                  cy="16.91549431"
-                  r="15.91549431"
-                />
-                <g class="circle-chart__info">
-                  <text
-                    class="circle-chart__percent"
-                    x="16.91549431"
-                    y="15"
-                    alignment-baseline="central"
-                    text-anchor="middle"
-                    font-size="12"
-                    fill="#333"
-                  >
-                    21
-                  </text>
-                  <text
-                    class="circle-chart__subline"
-                    x="16.91549431"
-                    y="22"
-                    alignment-baseline="central"
-                    text-anchor="middle"
-                    font-size="4"
-                    fill="grey"
-                  >
-                    / 28
-                  </text>
-                </g>
-              </svg>
+              <div>
+                <svg
+                  class="circle-chart"
+                  viewbox="0 0 33.83098862 33.83098862"
+                  width="200"
+                  height="200"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    class="circle-chart__background"
+                    stroke="#d4d4d4"
+                    stroke-width="2"
+                    fill="none"
+                    cx="16.91549431"
+                    cy="16.91549431"
+                    r="15.91549431"
+                  />
+                  <circle
+                    class="circle-chart__circle circle-chart__circle--negative"
+                    stroke="#F68B15"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    fill="none"
+                    cx="16.91549431"
+                    cy="16.91549431"
+                    r="15.91549431"
+                    style="stroke-dasharray: 75, 100"
+                  />
+                  <g class="circle-chart__info">
+                    <text
+                      class="circle-chart__percent"
+                      x="16.91549431"
+                      y="15"
+                      alignment-baseline="central"
+                      text-anchor="middle"
+                      font-size="12"
+                      fill="#333"
+                    >
+                      21
+                    </text>
+                    <text
+                      class="circle-chart__subline"
+                      x="16.91549431"
+                      y="22"
+                      alignment-baseline="central"
+                      text-anchor="middle"
+                      font-size="4"
+                      fill="grey"
+                    >
+                      / 28
+                    </text>
+                  </g>
+                </svg>
+              </div>
+              <div>
+                <button class="donut-random">Update Call Data</button>
+              </div>
             </div>
           </div>
         </div>

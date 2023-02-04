@@ -1,13 +1,28 @@
-//Event listeners
+//Variables
 const refreshButton = document.getElementById("refresh");
-refreshButton.addEventListener("click", reload);
+const donutCircle = document.querySelector(".circle-chart__circle");
+const donutMainValue = document.querySelector(".circle-chart__percent");
+const donutButton = document.querySelector(".donut-random");
 
-//reload
+//Event Listeners
+refreshButton.addEventListener("click", reload);
+donutButton.addEventListener("click", donutRandomiser);
+
+//Page reloader
 function reload() {
   refreshButton.style.transform = "rotate(360deg)";
   setTimeout(() => {
     window.location.reload(true);
   }, 1000);
+}
+
+//donut randomiser
+function donutRandomiser() {
+  console.log("running");
+  const randomValue = Math.floor(Math.random() * 28);
+  const circleValue = (randomValue / 28) * 100;
+  donutCircle.style.setProperty("stroke-dasharray", `${circleValue}, 100`);
+  donutMainValue.innerHTML = randomValue;
 }
 
 //Create chart container, heading and wrapper

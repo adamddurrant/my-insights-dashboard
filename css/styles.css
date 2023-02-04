@@ -199,6 +199,7 @@ h3 {
 .refresh {
   height: 50px;
   transition: 1s ease-in-out;
+  cursor: pointer;
 }
 .refresh::before {
   content: "Randomise";
@@ -232,6 +233,28 @@ h3 {
 
 .hero-heading {
   font-size: 2.5rem;
+}
+
+.donut-random {
+  cursor: pointer;
+  display: inline-block;
+  outline: 0;
+  margin-top: 20px;
+  border: 0;
+  cursor: pointer;
+  background-color: #4299e1;
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-size: 14px;
+  font-weight: 400;
+  color: white;
+  line-height: 26px;
+  transition: 0.3s ease-in-out;
+}
+
+.donut-random:hover {
+  background-color: #5f9ed1;
+  transition: 0.3s ease-in-out;
 }
 
 /* Sidebar styles */
@@ -315,6 +338,7 @@ h3,
 .donut-wrapper {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .circle-chart__circle {
@@ -347,7 +371,6 @@ h3,
   .sidenav a {
     font-size: 18px;
   }
-
   #toggle {
     display: block;
   }
