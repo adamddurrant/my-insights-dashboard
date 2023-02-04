@@ -196,6 +196,20 @@ h3 {
   padding: 5% 7% 5% 7%;
 }
 
+.refresh {
+  height: 50px;
+  transition: 1s ease-in-out;
+}
+.refresh::before {
+  content: "Randomise";
+}
+
+.hero-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .calls {
   display: flex;
   flex-wrap: wrap;

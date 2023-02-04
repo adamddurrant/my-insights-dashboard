@@ -1,3 +1,15 @@
+//Event listeners
+const refreshButton = document.getElementById("refresh");
+refreshButton.addEventListener("click", reload);
+
+//reload
+function reload() {
+  refreshButton.style.transform = "rotate(360deg)";
+  setTimeout(() => {
+    window.location.reload(true);
+  }, 1000);
+}
+
 //Create chart container, heading and wrapper
 const createChart = (title, percentages, containerId) => {
   const chartContainer = document.getElementById(containerId);
@@ -18,11 +30,25 @@ const createChart = (title, percentages, containerId) => {
   chartContainer.prepend(heading);
 };
 
-//Dummy data
-const data1 = [20, 30, 25, 10, 10, 5];
-const data2 = [20, 30, 20, 5, 5, 20];
-const data3 = [15, 25, 20, 20, 15, 5];
-const data4 = [43, 22, 15, 5, 5, 10];
+//Random bar chart data generator on load
+const generateRandomData = () => {
+  const arr = [];
+  let total = 100;
+  const numBars = 6;
+  for (let i = 0; i < numBars - 1; i++) {
+    const randomValue = Math.floor(Math.random() * total);
+    total -= randomValue;
+    arr.push(randomValue);
+  }
+  arr.push(total);
+  return arr;
+};
+
+//Random bar chart dummy data
+const data1 = generateRandomData();
+const data2 = generateRandomData();
+const data3 = generateRandomData();
+const data4 = generateRandomData();
 
 //Function calls
 createChart("Avg. all", data1, "chartContainer1");

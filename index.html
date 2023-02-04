@@ -44,7 +44,10 @@
           <div class="bar3"></div>
         </div>
       </span>
-      <h1 class="hero-heading">Overview</h1>
+      <div class="hero-section">
+        <h1 class="hero-heading">Overview</h1>
+        <img id="refresh" class="refresh" src="/img/refresh.png" />
+      </div>
       <div class="main-content-wrapper">
         <div class="calls">
           <div class="col half">
@@ -147,9 +150,7 @@
             </div>
           </div>
         </div>
-
         <!--Topic breakdown-->
-
         <div class="topics">
           <h2 class="primary-heading topic-heading">
             Detailed topic breakdown
@@ -181,16 +182,16 @@
             </div>
           </div>
           <!--Bar charts-->
-          <div class="charts-wrapper">
-            <div id="chartContainer1"></div>
-            <div id="chartContainer2"></div>
-            <div id="chartContainer3"></div>
-            <div id="chartContainer4"></div>
+          <div id="charts-wrapper" class="charts-wrapper">
+            <div class="chart-container" id="chartContainer1"></div>
+            <div class="chart-container" id="chartContainer2"></div>
+            <div class="chart-container" id="chartContainer3"></div>
+            <div class="chart-container" id="chartContainer4"></div>
           </div>
         </div>
       </div>
     </main>
     <script src="/js/sidebar.js"></script>
-    <script src="/js/bar-charts.js"></script>
+    <script type="module" src="/js/charts.js"></script>
   </body>
 </html>

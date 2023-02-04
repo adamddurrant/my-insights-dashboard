@@ -2,7 +2,7 @@
 
 ## Screenshot
 
-![screenshot](screenshot.png)
+![screenshot](img/screenshot.png)
 
 ## Reflection
 
